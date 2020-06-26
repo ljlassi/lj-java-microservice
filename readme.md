@@ -2,4 +2,4 @@ I'm building a Java microservice here to communicate with a PHP application thro
 
 Very much work in progress, by the time I'm writing this, has a functional user model, loads local config file with DB credentials and connects to a MySQL database.
 
-Documentation and testing has to be also added.
+I have yet to add unit tests etc.
