@@ -1,6 +1,7 @@
 package ljtmi.microservice;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 public class LJtmiMicroservice {
   public static void main(String[] args) throws IOException {
@@ -32,5 +33,9 @@ public class LJtmiMicroservice {
 			System.out.println(config.getDBName());
 			System.out.println(config.getDBUser());
 			System.out.println(config.getDBPassword());
+			
+			DBConnection con = new DBConnection();
+			Connection connection = con.getDBObject();
+			
 		  }
 }
