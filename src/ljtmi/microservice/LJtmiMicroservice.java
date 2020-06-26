@@ -5,6 +5,11 @@ import java.sql.Connection;
 
 public class LJtmiMicroservice {
   public static void main(String[] args) throws IOException {
+	  
+	  /**
+	   * Purpose of main at this point is to test that everything works
+	   */
+	  
 	    System.out.println("Testing model.");
 			int id = 1;
 			String username = "Person1";

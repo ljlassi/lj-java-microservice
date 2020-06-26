@@ -6,6 +6,15 @@ import java.io.InputStream;
 import java.util.Date;
 import java.util.Properties;
 
+/**
+ * 
+ * @author lassi
+ * 
+ * the purpose of this class is to read the config file, store and return contents.
+ * Config file is config.properties in resources folder.
+ *
+ */
+
 public class Config implements ConfigInterface {
 	
 	String config_file_name = "config.properties";
@@ -14,6 +23,12 @@ public class Config implements ConfigInterface {
 	String db_name = "";
 	String db_user = "";
 	String db_password = "";
+	
+	/**
+	 * Reads config file and loads data into class member variables.
+	 * 
+	 * @return integer
+	 */
 	
 	@SuppressWarnings("finally")
 	public int readConfigFile() throws IOException {
@@ -42,6 +57,10 @@ public class Config implements ConfigInterface {
 			return 0;
 		}
 	}
+	
+	/**
+	 * Getters to be used after readConfigFile() has been called
+	 */
 	
 	public String getDBHost() {
 		return this.db_host;

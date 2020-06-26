@@ -2,6 +2,13 @@ package ljtmi.microservice;
 
 import java.io.IOException;
 
+/**
+ * 
+ * @author lassi
+ *
+ * interface for Config class
+ */
+
 public interface ConfigInterface {
 	
 	public int readConfigFile() throws IOException;

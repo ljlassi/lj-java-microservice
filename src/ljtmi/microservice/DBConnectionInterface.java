@@ -1,5 +1,13 @@
 package ljtmi.microservice;
 
+/**
+ * 
+ * @author lassi
+ * 
+ * Interface for DBConnection class
+ *
+ */
+
 public interface DBConnectionInterface {
 
 	public int ConnectToDB();

@@ -1,5 +1,13 @@
 package ljtmi.microservice;
 
+/**
+ * 
+ * @author lassi
+ * 
+ * Interface for User classs
+ *
+ */
+
 public interface UserInterface {
 
 	  public void setId(int id);
