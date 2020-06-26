@@ -8,7 +8,6 @@ import java.sql.*;
  *
  *Purpose of this class is to establish a database connection, save the connection
  * object as a class member can then retrieve the object with the getter for further use.
- * This is simply for obtaining the connection object, idea is not to expand this class.
  *
  */
 
@@ -25,8 +24,8 @@ public class DBConnection {
 	
 	public int ConnectToDB(ConfigInterface config) {
 		try {
-			Class.forName("com.myql.jbbc.Driver");
-			this.con = DriverManager.getConnection("jbcd:mysql://" + config.getDBHost()
+			Class.forName("com.mysql.jdbc.Driver");
+			this.con = DriverManager.getConnection("jdbc:mysql://" + config.getDBHost()
 			+ "/" + config.getDBName(), config.getDBUser(), config.getDBPassword());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -37,5 +36,16 @@ public class DBConnection {
 	
 	public Connection getDBObject() {
 		return this.con;
+	}
+	
+	public int runInsertQuery(String query) {
+		try {
+			Statement stmt = this.con.createStatement();
+			stmt.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+		return 0;
 	}
 }
