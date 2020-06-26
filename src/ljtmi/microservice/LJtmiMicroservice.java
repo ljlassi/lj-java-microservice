@@ -1,7 +1,9 @@
 package ljtmi.microservice;
 
+import java.io.IOException;
+
 public class LJtmiMicroservice {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
 	    System.out.println("Testing model.");
 			int id = 1;
 			String username = "Person1";
@@ -23,6 +25,12 @@ public class LJtmiMicroservice {
 			System.out.println(user.getAuthKey());
 			System.out.println(user.getEmail());
 			System.out.println(user.getPhone());
-
+			
+			Config config = new Config();
+			config.readConfigFile();
+			System.out.println(config.getDBHost());
+			System.out.println(config.getDBName());
+			System.out.println(config.getDBUser());
+			System.out.println(config.getDBPassword());
 		  }
 }

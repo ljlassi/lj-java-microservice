@@ -1,0 +1,6 @@
+config.properties file example. Rename this config.properties, add your local settings and remove this comment line.
+
+dbhost=localhost
+dbname=yourdatabasename
+dbuser=yourmysqluser
+dbpassword=yourmysqlpassword
