@@ -32,7 +32,6 @@ public class Config implements ConfigInterface {
 	
 	@SuppressWarnings("finally")
 	public int readConfigFile() throws IOException {
-		String db_credentials = "";
 		Properties prop = new Properties();
 		
 		try {
