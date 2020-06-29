@@ -4,3 +4,4 @@ dbhost=localhost:port
 dbname=yourdatabasename
 dbuser=yourmysqluser
 dbpassword=yourmysqlpassword
+serverport=8080

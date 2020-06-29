@@ -5,7 +5,7 @@ package ljtmi.microservice;
  * @author lassi
  *
  * Simple model for user with getters and setters. The plan is to use the User object
- * elsewhere in the code. I did not add a constructor so far, I have to at least
+ * elsewhere in the code. I did not add a constructor yet, I have to at least
  * figure out what properties are necessary (e.g. is phone number required).
  */
 
