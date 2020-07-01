@@ -23,7 +23,7 @@ public class Config implements ConfigInterface {
 	String db_name = "";
 	String db_user = "";
 	String db_password = "";
-	int server_port = 0;
+	String server_port = "";
 	
 	/**
 	 * Reads config file and loads data into class member variables.
@@ -50,7 +50,7 @@ public class Config implements ConfigInterface {
 			this.db_name = prop.getProperty("dbname");
 			this.db_user = prop.getProperty("dbuser");
 			this.db_password = prop.getProperty("dbpassword");
-			this.server_port = prop.getPropery("server_port")
+			this.server_port = prop.getProperty("server_port");
 		} catch(Exception e) {
 			System.out.println("Exception: " + e);
 		} finally {
@@ -77,6 +77,10 @@ public class Config implements ConfigInterface {
 	
 	public String getDBPassword() {
 		return this.db_password;
+	}
+	
+	public String getServerPort() {
+		return this.server_port;
 	}
 	
 }
