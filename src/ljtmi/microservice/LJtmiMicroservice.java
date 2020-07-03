@@ -44,6 +44,14 @@ public class LJtmiMicroservice {
 			user_controller.saveUserToDB(user, con);
 			
 			MyServer my_server = new MyServer(config.getServerPort());
+			try {
+				if (my_server.startServer() == 0) {
+					System.out.println("Succesfylly started a Jetty server connection.");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			
 		  }
