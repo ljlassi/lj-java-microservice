@@ -23,7 +23,7 @@ public class Config implements ConfigInterface {
 	String db_name = "";
 	String db_user = "";
 	String db_password = "";
-	String server_port = "";
+	int server_port = 0;
 	
 	/**
 	 * Reads config file and loads data into class member variables.
@@ -44,13 +44,12 @@ public class Config implements ConfigInterface {
 				throw new FileNotFoundException("property file '" + config_file_name + "' not found in the classpath");
 			}
 			
-			Date time = new Date(System.currentTimeMillis());
-			
 			this.db_host = prop.getProperty("dbhost");
 			this.db_name = prop.getProperty("dbname");
 			this.db_user = prop.getProperty("dbuser");
 			this.db_password = prop.getProperty("dbpassword");
-			this.server_port = prop.getProperty("server_port");
+			String server_port = prop.getProperty("server_port");
+			this.server_port = Integer.parseInt(server_port.trim());
 		} catch(Exception e) {
 			System.out.println("Exception: " + e);
 		} finally {
@@ -79,7 +78,7 @@ public class Config implements ConfigInterface {
 		return this.db_password;
 	}
 	
-	public String getServerPort() {
+	public int getServerPort() {
 		return this.server_port;
 	}
 	

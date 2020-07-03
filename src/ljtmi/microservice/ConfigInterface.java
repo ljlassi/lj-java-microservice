@@ -16,5 +16,5 @@ public interface ConfigInterface {
 	public String getDBName();
 	public String getDBUser();
 	public String getDBPassword();
-	public String getServerPort();
+	public int getServerPort();
 }

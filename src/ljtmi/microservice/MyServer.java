@@ -1,4 +1,5 @@
 package ljtmi.microservice;
+import org.eclipse.jetty.server.Server;
 
 public class MyServer {
 	
@@ -7,6 +8,6 @@ public class MyServer {
 	
 	public MyServer(int port_number) {
 		this.port_number = port_number;
+		this.server = new Server(this.port_number);
 	}
-
 }

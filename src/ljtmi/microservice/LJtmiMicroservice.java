@@ -43,5 +43,8 @@ public class LJtmiMicroservice {
 			UserController user_controller = new UserController();
 			user_controller.saveUserToDB(user, con);
 			
+			MyServer my_server = new MyServer(config.getServerPort());
+			
+			
 		  }
 }
