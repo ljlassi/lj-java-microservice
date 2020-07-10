@@ -1,6 +1,7 @@
 package ljtmi.microservice;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class LJtmiMicroservice {
   public static void main(String[] args) throws IOException {
@@ -53,6 +54,9 @@ public class LJtmiMicroservice {
 				e.printStackTrace();
 			}
 			
+			Scanner myObj = new Scanner(System.in);
+			System.out.println("Program will keep running. Enter any key to stop program.");
+			String stop = myObj.nextLine();
 			
 		  }
 }
