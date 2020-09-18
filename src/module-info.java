@@ -1,7 +1,7 @@
 module ljmicroservice {
 	requires java.sql;
-	requires jetty.server;
-	requires jetty.util;
+	requires org.eclipse.jetty.server;
+	requires org.eclipse.jetty.util;
 	requires javax.servlet.api;
-	requires jetty.http;
+	requires org.eclipse.jetty.http;
 }
