@@ -34,10 +34,6 @@ public class LJtmiMicroservice {
 			
 			Config config = new Config();
 			config.readConfigFile();
-			System.out.println(config.getDBHost());
-			System.out.println(config.getDBName());
-			System.out.println(config.getDBUser());
-			System.out.println(config.getDBPassword());
 			
 			DBConnection con = new DBConnection();
 			con.ConnectToDB(config);
