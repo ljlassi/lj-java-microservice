@@ -14,7 +14,9 @@ public class MyHandler extends AbstractHandler {
 	private String body;
 
     public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        response.setContentType("text/html;charset=utf-8");
+        System.out.println(request.getMethod());
+        System.out.println(request.getParameter("id"));
+    	response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
         baseRequest.setHandled(true);
         response.getWriter().println("Got the API call.");
